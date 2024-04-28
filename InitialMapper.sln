@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34031.279
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InitialMapper", "InitialMapper\InitialMapper.csproj", "{4E41C591-6986-4576-B80C-D8C1D85CF830}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E41C591-6986-4576-B80C-D8C1D85CF830}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E41C591-6986-4576-B80C-D8C1D85CF830}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E41C591-6986-4576-B80C-D8C1D85CF830}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{4E41C591-6986-4576-B80C-D8C1D85CF830}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E41C591-6986-4576-B80C-D8C1D85CF830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E41C591-6986-4576-B80C-D8C1D85CF830}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7985FEB6-94BE-4339-B3FB-F5E39F5F9BE7}
+	EndGlobalSection
+EndGlobal

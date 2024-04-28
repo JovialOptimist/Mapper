@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="InitialMapper.Logic"
+             Title="Logic">
+    <VerticalStackLayout>
+        <!-- How often do you want to stop? -->
+        <Border Background="{StaticResource LightBG}" Margin="15,15,15,0">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10" />
+            </Border.StrokeShape>
+            <Grid Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Question Prompt -->
+                <Label Grid.ColumnSpan="3"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="0"
+                       FontSize="20">
+                    How often do you want to stop?
+                </Label>
+
+                <Label Grid.ColumnSpan="3"
+                       HorizontalTextAlignment="Center"
+                       Grid.Row="1"
+                       FontSize="15">
+                    (Every ____ minutes)
+                </Label>
+
+                <!-- Minus button -->
+                <Button Text="-" 
+                        FontSize="30" 
+                        Grid.Column="0" 
+                        Grid.Row="2"
+                        Background="{StaticResource MediumBG}"
+                        Margin="0,0,10,0">
+
+                </Button>
+
+                <!-- Text entry -->
+                <Border Grid.Column="1"
+                        Grid.Row="2">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10,10,10,10" />
+                    </Border.StrokeShape>
+                    <Entry Placeholder="30" 
+                           Background="#ffffff" 
+                           HorizontalTextAlignment="Center" 
+                           FontSize="30"
+                           x:Name="stopFrequencyEntry">
+
+                    </Entry>
+                </Border>
+
+                <!-- Plus button -->
+                <Button Text="+" 
+                        FontSize="30" 
+                        Grid.Column="2"
+                        Grid.Row="2"
+                        Background="{StaticResource MediumBG}"
+                        Margin="10,0,0,0">
+
+                </Button>
+
+                <!-- Explanation -->
+                <Label Grid.ColumnSpan="3"
+                       Grid.Row="3"
+                       VerticalTextAlignment="End"
+                       HorizontalTextAlignment="Center"
+                       FontSize="16"
+                       TextColor="#4a4a4a"
+                       x:Name="stopFrequencyLabel">
+                    This makes for a total of ___ stops
+                </Label>
+            </Grid>
+        </Border>
+
+        <!-- How much of a detour is okay? -->
+        <Border Background="{StaticResource LightBG}" Margin="15">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10" />
+            </Border.StrokeShape>
+            <Grid Padding="15">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Question Prompt -->
+                <Label Grid.ColumnSpan="3"
+                       Grid.Row="0"
+                       HorizontalTextAlignment="Center"
+                       FontSize="20">
+                    How much of a detour is okay?
+                </Label>
+
+                <Label Grid.ColumnSpan="3"
+                       Grid.Row="1"
+                       HorizontalTextAlignment="Center"
+                       FontSize="15">
+                    (Maximum of ____ minutes)
+                </Label>
+
+                <!-- Minus button -->
+                <Button Text="-" 
+                        FontSize="30" 
+                        Grid.Column="0" 
+                        Grid.Row="2"
+                        Background="{StaticResource MediumBG}"
+                        Margin="0,0,10,0">
+
+                </Button>
+
+                <!-- Text entry -->
+                <Border Grid.Column="1"
+                Grid.Row="2">
+                    <Border.StrokeShape>
+                        <RoundRectangle CornerRadius="10,10,10,10" />
+                    </Border.StrokeShape>
+                    <Entry Placeholder="30" 
+                           Background="#ffffff" 
+                           HorizontalTextAlignment="Center" 
+                           FontSize="30"
+                           x:Name="detourTimeEntry">
+
+                    </Entry>
+                </Border>
+
+                <!-- Plus button -->
+                <Button Text="+" 
+                        FontSize="30" 
+                        Grid.Column="3"
+                        Grid.Row="2"
+                        Background="{StaticResource MediumBG}"
+                        Margin="10,0,0,0">
+
+                </Button>
+
+                <!-- Explanation -->
+                <Label Grid.ColumnSpan="3"
+                       Grid.Row="3"
+                       VerticalTextAlignment="End"
+                       HorizontalTextAlignment="Center"
+                       FontSize="16"
+                       TextColor="#4a4a4a"
+                       x:Name="detourTimeLabel">
+                    This makes your total trip time ____.
+                </Label>
+            </Grid>
+        </Border>
+
+        <Border Background="{StaticResource LightBG}" Margin="15,0,15,15" Padding="15">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="10,10,10,10" />
+            </Border.StrokeShape>
+            <VerticalStackLayout Spacing="10">
+                <Label FontSize="20"
+                       x:Name="summaryLabel">
+                    You'll stop ___ times and arrive at your final destination at ____.
+                </Label>
+                <Button BackgroundColor="{StaticResource MediumBG}" 
+                        Text="Continue"
+                        FontSize="30"
+                        x:Name="continueButton">
+
+                </Button>
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- If we have time: -->
+        <!-- Custom plan out stop times -->
+    </VerticalStackLayout>
+</ContentPage>

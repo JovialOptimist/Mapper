@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="InitialMapper.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:InitialMapper"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.BackgroundColor="{StaticResource HeavyBG}">
+
+    <Shell.Resources>
+        <Style TargetType="TabBar">
+            <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource HeavyBG}" />
+            <Setter Property="Shell.TabBarUnselectedColor" Value="{StaticResource HeavyAndMediumFG}"/>
+            <Setter Property="Shell.TabBarTitleColor" Value="{StaticResource HeavyAndMediumFG}"/>
+            <Setter Property="Shell.TitleColor" Value="{StaticResource HeavyAndMediumFG}"/>
+        </Style>
+    </Shell.Resources>
+
+    <TabBar>
+        <ShellContent Title="Map"
+                      Icon="map.png"
+                      ContentTemplate="{DataTemplate local:MainPage}">
+
+        </ShellContent>
+        <ShellContent Title="Logic"
+                      Icon="logic.png"
+                      ContentTemplate="{DataTemplate local:Logic}">
+
+        </ShellContent>
+        <ShellContent Title="Export"
+                      Icon="export.png"
+                      ContentTemplate="{DataTemplate local:Export}">
+
+        </ShellContent>
+    </TabBar>
+
+</Shell>
